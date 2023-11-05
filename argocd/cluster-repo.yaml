@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: repo-github
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  annotations:
+    managed-by: argocd.argoproj.io
+data:
+  project: ZGVmYXVsdA==
+  type: Z2l0
+  url: aHR0cHM6Ly9naXRodWIuY29tL3ZpdG9ycGF2YW5pL2NsdXN0ZXIuZ2l0
+type: Opaque
