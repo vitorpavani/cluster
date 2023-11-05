@@ -20,10 +20,16 @@ First apply namespace.
 kubectl apply -f argocd/argocd-ns.yaml
 ```
 
-Then apply the manifests.
+Then install ArgoCD.
 
 ```
-kubectl apply -f argocd/
+kubectl apply -n argocd -f argocd/install.yaml
+```
+
+Add the ArgoCD repo and Cluster Application.
+
+```
+kubectl apply -n argocd -f argocd/configs/
 ```
 
 ### 2.2 Access ArgoCD
@@ -39,4 +45,3 @@ Then we can access ArgoCD with the password.
 ```
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
-
