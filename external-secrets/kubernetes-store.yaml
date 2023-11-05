@@ -7,7 +7,7 @@ spec:
     kubernetes:
       # with this, the store is able to pull only from `default` namespace
       server:
-        url: "https://127.0.0.1:39431" #Local Cluster
+        url: "https://kubernetes.default.svc" #Local Cluster
         caProvider:
           type: ConfigMap
           name: kube-root-ca.crt
