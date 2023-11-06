@@ -20,7 +20,9 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: argocd-server-metrics
+  namespace: monitoring
   labels:
+    monitoring: default
     release: prometheus-operator
 spec:
   selector:
@@ -33,7 +35,9 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: argocd-repo-server-metrics
+  namespace: monitoring
   labels:
+    monitoring: default
     release: prometheus-operator
 spec:
   selector:
@@ -46,7 +50,9 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: argocd-applicationset-controller-metrics
+  namespace: monitoring
   labels:
+    monitoring: default
     release: prometheus-operator
 spec:
   selector:
